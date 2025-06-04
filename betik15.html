@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Başkanlar</title>
+</head>
+<body>
+<p id="demo"></p>
+ 
+<script>
+let text = '{"baskanlar":[' +
+'{"baskan":"boran","soyadi":"a" },' +
+'{"baskan":"sinem","soyadi":"b" },' +
+'{"baskan":"ayberk","soyadi":"c" },' +
+'{"baskan":"arda","soyadi":"d" },' +
+'{"baskan":"ahmet","soyadi":"e" }]}';
+ 
+const obj = JSON.parse(text);
+ 
+let output = "";
+for(let i = 0; i < obj.baskanlar.length; i++) {
+    output += obj.baskanlar[i].baskan + " " + obj.baskanlar[i].soyadi + "<br>";
+}
+ 
+document.getElementById("demo").innerHTML = output;
+</script>
+ 
+</body>
+</html>
+ 
